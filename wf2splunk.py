@@ -161,13 +161,13 @@ def format_device_status(data: str):
 def format_obs_st(data: str):
     # process obs_st data
     # {"serial_number":"ST-00113978","type":"obs_st","hub_sn":"HB-00016720","obs":[[1734246921,0.00,0.26,0.75,104,3,998.60,8.30,81.18,1,0.00,0,0.000000,0,0,0,2.646,1]],"firmware_revision":181}
-    if data["obs"][0][12] == 0:
+    if data["obs"][0][13] == 0:
         percipitation_type_h = "none"
-    elif data["obs"][0][12] == 1:
+    elif data["obs"][0][13] == 1:
         percipitation_type_h = "rain"
-    elif data["obs"][0][12] == 2:
+    elif data["obs"][0][13] == 2:
         percipitation_type_h = "hail"
-    elif data["obs"][0][12] == 3:
+    elif data["obs"][0][13] == 3:
         percipitation_type_h = "rain + hail"
     else:
         percipitation_type_h = "unknown"
